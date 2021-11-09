@@ -1,0 +1,21 @@
+.dots {
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #3f3f50;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.dot_chosen {
+  width: 10px;
+  height: 10px;
+  background-color: #6249fa;
+  border-radius: 10px;
+  margin: 5px;
+}

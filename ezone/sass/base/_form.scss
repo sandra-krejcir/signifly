@@ -1,0 +1,24 @@
+label {
+  color: #a5a5ac;
+  display: block;
+}
+
+input {
+  background-color: unset;
+  border: unset;
+  border: 1px solid #a5a5ac;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 80%;
+  color: #e3e3e5;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+input:valid {
+  border-color: #5be080;
+}
+
+input:invalid:not(:placeholder-shown, :focus) {
+  border-color: #f48d69;
+}

@@ -1,0 +1,27 @@
+form button {
+  color: #e3e3e5;
+  background-color: #6249fa;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+#first_button {
+  color: #e3e3e5;
+  background-color: #6249fa;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+  color: #6249fa;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
