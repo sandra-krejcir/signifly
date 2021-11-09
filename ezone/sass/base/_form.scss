@@ -3,6 +3,59 @@ label {
   display: block;
 }
 
+[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: flex;
+  line-height: 25px;
+  margin-top: -2.8rem;
+  margin-bottom: 3rem;
+  margin-left: 1.3rem;
+}
+
+[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  outline: 2px solid #a5a5ac;
+  border-radius: 100%;
+  left: 8px;
+  top: 8px;
+}
+
+[type="checkbox"]:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  outline: 2px solid #5be080;
+  border-radius: 100%;
+  left: 8px;
+  top: 8px;
+}
+
+[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  left: 8px;
+  top: 8px;
+  background-image: url(/ezone/img/check.png);
+  background-size: contain;
+}
+
 input {
   background-color: unset;
   border: unset;

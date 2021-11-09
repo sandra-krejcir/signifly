@@ -1,4 +1,5 @@
 import "./index.scss";
+import "./animations";
 
 const types = {
   FPS: false,

@@ -7,148 +7,52 @@
     <title>Vite App</title>
   </head>
   <body>
+
     <section id="started">
       <img src="img/logo.svg" alt="logo" />
+      <div class="dots">
+        <div class="dot_chosen"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
       <div class="container">
         <img src="img/e.png" alt="logo" />
         <h2>Let's get Started!</h2>
         <p>
-          Create an account and get a personalized filter to see content that
-          fits your needs and improve faster!
+          Create a gamertag, submit your email and get a personalized
+          filter to see content that fits your needs and improve faster!
         </p>
-        <button id="first_button">Continue</button>
-      </div>
-    </section>
-
-    <section id="gamertag_section">
-      <img src="img/logo.svg" alt="logo" />
-      <div class="dots">
-        <div class="dot_chosen"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-      <div class="container">
-        <img src="img/e.png" alt="logo" />
-        <p>
-          Your gamer tag will be your public identity. You’ll be able to change
-          it at any time
-        </p>
+        <!-- <form action="javascript:formGames()"> -->
         <form>
           <label for="gamertag">Gamertag</label>
           <input id="gamertag" type="text" placeholder=" " required />
-          <button>Continue</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="name">
-      <img src="img/logo.svg" alt="logo" />
-      <div class="dots">
-        <div class="dot"></div>
-        <div class="dot_chosen"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-      <div class="container">
-        <img src="img/e.png" alt="logo" />
-        <p>
-          Your real name may be used later to verify your identity when
-          contacted by EZONE. By default, your gamer tag will be publicly
-          visible
-        </p>
-        <form>
-          <label for="first_name">First name</label>
-          <input id="first_name" type="text" placeholder=" " required />
-
-          <label for="last_name">Last name</label>
-          <input id="last_name" type="text" placeholder=" " required />
-
-          <button>Continue</button>
-        </form>
-        <button>Go Back</button>
-      </div>
-    </section>
-
-    <section id="email_section">
-      <img src="img/logo.svg" alt="logo" />
-      <div class="dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot_chosen"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-      <div class="container">
-        <img src="img/e.png" alt="logo" />
-        <p>This is what you will use when you log in to EZONE</p>
-
-        <form>
           <label for="mail">E-mail</label>
           <input id="mail" type="email" placeholder=" " required />
-
-          <input id="subscribe" type="checkbox" checked="checked" />
-          <label for="subscribe"
-            >Subscribe to our newsletter, and get personalized suggestions for
-            improvement</label
-          >
-
-          <label for="phone">(Optional) Phone Number</label>
-          <input id="phone" type="tel" placeholder=" " />
-          <button>Continue</button>
+          <input id="subscribe" type="checkbox" checked="checked" name="sub" />
+          <label name="sub" for="subscribe">Subscribe to our newsletter</label>
+          <button id="start_but">Continue</button>
         </form>
         <button>Go Back</button>
       </div>
     </section>
 
-    <section id="password">
-      <img src="img/logo.svg" alt="logo" />
-      <div class="dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot_chosen"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-      <div class="container">
-        <img src="img/e.png" alt="logo" />
-        <p>Secure your account with a strong password</p>
-        <form>
-          <label for="password1">Password</label>
-          <input id="password1" type="password" placeholder=" " required />
-
-          <label for="password2">Repeat password</label>
-          <input id="password2" type="password" placeholder=" " required />
-
-          <button>Continue</button>
-        </form>
-        <button>Go Back</button>
-      </div>
-    </section>
+   
 
     <section id="games">
       <div class="dots">
         <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
         <div class="dot_chosen"></div>
+        <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
       <div class="container">
         <img src="img/e.png" alt="logo" />
-        <p>What games do you play? (Optional)</p>
+        <p>Hi Gamertag! <br>
+          What games do you play? <br>
+          This is for your personal filter algorithm</p>
 
         <button id="CS_GO" class="gameOption" data-feature="CS_GO">
           CS GO
@@ -258,9 +162,9 @@
           Heroes of the Storm
         </button>
         <form>
-          <button>Continue</button>
+          <button id="games_but">Continue</button>
         </form>
-        <button>Go Back</button>
+        <button id="games_back">Go Back</button>
       </div>
     </section>
 
@@ -268,16 +172,15 @@
       <div class="dots">
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
         <div class="dot_chosen"></div>
+        <div class="dot"></div>
         <div class="dot"></div>
       </div>
       <div class="container">
         <img src="img/e.png" alt="logo" />
         <p>
-          What Type of games do you play? <br />
+          Yo Gamertag! <br>
+          What Type of games do you play? <br>
           This is for your personal filter algorithm
         </p>
 
@@ -336,9 +239,9 @@
         </button>
         <button id="Moba" class="typeOption" data-feature="Moba">Moba</button>
         <form>
-          <button>Continue</button>
+          <button id="type_but">Continue</button>
         </form>
-        <button>Go Back</button>
+        <button id="type_back">Go Back</button>
       </div>
     </section>
 
@@ -347,16 +250,16 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
         <div class="dot_chosen"></div>
+        <div class="dot"></div>
+       
       </div>
       <div class="container">
         <img src="img/e.png" alt="logo" />
         <p>
-          What area do you want to improve? This is for your personal filter
-          algorithm
+          Hey Gamertag! <br>
+          What area do you want to improve? <br>
+          This is for your personal filter algorithm
         </p>
         <button
           id="Hand_eye_coordination"
@@ -430,9 +333,39 @@
         </button>
         <button class="submit">SUBMIT</button>
         <form>
-          <button>Finish</button>
+          <button id="area_but">Send Filter</button>
         </form>
-        <button>Go Back</button>
+        <button id="area_back">Go Back</button>
+      </div>
+    </section>
+
+    <section id="password">
+      <img src="img/logo.svg" alt="logo" />
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot_chosen"></div>
+      </div>
+      <div class="container">
+        <img src="img/e.png" alt="logo" />
+        <h2>Link sent</h2>
+        <p>Would you like to create an account? <br>
+          Join the EZONE community and chat with other gamers.
+         All that's left for you to do is create a password
+         and you are all set! 
+         </p>
+        <form>
+          <label for="password1">Password</label>
+          <input id="password1" type="password" placeholder=" " required />
+
+          <label for="password2">Repeat password</label>
+          <input id="password2" type="password" placeholder=" " required />
+
+          <button id="password_but">Create Acount</button>
+        </form>
+        <button id="password_back">Frontpage</button>
       </div>
     </section>
 
