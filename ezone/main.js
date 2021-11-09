@@ -16,6 +16,7 @@ const types = {
   Rhythm: false,
   Platform: false,
   Arcade: false,
+  Moba: false,
 };
 
 const games = {
@@ -42,6 +43,10 @@ const games = {
   Minecraft: false,
   Tetris: false,
   Pack_Man: false,
+  Crash_Bandicoot: false,
+  Rainbow_Six: false,
+  Rocket_League: false,
+  Heroes_of_the_Storm: false,
 };
 
 const areas = {
