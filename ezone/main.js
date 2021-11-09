@@ -36,7 +36,7 @@ const games = {
   League_of_Legends: false,
   Dota: false,
   Valorant: false,
-  Left_for_dead: false,
+  Left_for_Dead: false,
   Overwatch: false,
   PUBG: false,
   Diablo: false,
@@ -89,6 +89,9 @@ function start() {
   document
     .querySelectorAll(".areaOption")
     .forEach((selectArea) => selectArea.addEventListener("click", toggleArea));
+  document
+    .querySelector("#League_of_Legends")
+    .addEventListener("click", preselectAreas);
 
   document.querySelector(".submit").addEventListener("click", pushData);
 }
@@ -148,6 +151,26 @@ function toggleArea(event) {
   } else {
     const areaIndex = arrayOfAreas.indexOf(selectedArea);
     arrayOfAreas.splice(areaIndex, 1);
+  }
+
+  console.log(arrayOfAreas);
+}
+
+function preselectAreas(event) {
+  const target = event.currentTarget;
+  const selectedGame = target.dataset.feature;
+
+  if (games[selectedGame]) {
+    areas["Strategy"] = true;
+    areas["Sleep"] = true;
+    arrayOfAreas.push("Strategy", "Sleep");
+  } else {
+    areas["Strategy"] = false;
+    areas["Sleep"] = false;
+    const indexStrategy = arrayOfAreas.indexOf("Strategy");
+    arrayOfAreas.splice(indexStrategy, 1);
+    const indexSleep = arrayOfAreas.indexOf("Sleep");
+    arrayOfAreas.splice(indexSleep, 1);
   }
 
   console.log(arrayOfAreas);
