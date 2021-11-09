@@ -1,6 +1,66 @@
 import "./style.scss";
 
-document.querySelector("#app").innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+const types = {
+  FPS: false,
+  MMORPG: false,
+  Sports: false,
+  Racing: false,
+  Tower_Defense: false,
+  RTS: false,
+  Simulation: false,
+  Role_Playing: false,
+  Adventure: false,
+  Survival: false,
+  Fighting: false,
+  Battle_Royale: false,
+  Rhythm: false,
+  Platform: false,
+  Arcade: false,
+};
+
+const games = {
+  CS_GO: false,
+  Tekken: false,
+  FIFA: false,
+  Super_Mario: false,
+  Fortnite: false,
+  Call_of_Duty: false,
+  The_Sims: false,
+  Mortal_Combat: false,
+  Guitar_Hero: false,
+  World_of_Warcraft: false,
+  Skyrim: false,
+  Starcraft: false,
+  Warcraft: false,
+  League_of_Legends: false,
+  Dota: false,
+  Valorant: false,
+  Left_for_dead: false,
+  Overwatch: false,
+  PUBG: false,
+  Diablo: false,
+  Minecraft: false,
+  Tetris: false,
+  Pack_Man: false,
+};
+
+const areas = {
+  Hand_eye_coordination: false,
+  Reaction_time: false,
+  Hearing: false,
+  Vision: false,
+  Communication: false,
+  Multitasking: false,
+  Mindset: false,
+  Nutrition: false,
+  Injuries: false,
+  Technology: false,
+  Physiology: false,
+  Psycology: false,
+  Sleep: false,
+  Stress: false,
+  Tactical: false,
+  Strategy: false,
+  Leadership: false,
+  Teamwork: false,
+};
