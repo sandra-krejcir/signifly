@@ -28,6 +28,11 @@ function start() {
     .addEventListener("click", preselectAreas);
 
   document.querySelector("#area_but").addEventListener("click", pushData);
+  document.querySelectorAll("input").forEach((e) => {
+    e.addEventListener("focus", moveLabel);
+  });
+
+  document.querySelector("#subscribe").removeEventListener("focus", moveLabel);
 
   if (document.querySelector("#subscribe").checked) {
     subscribed = "yes";
@@ -105,18 +110,51 @@ function preselectAreas(event) {
   if (games[selectedGame]) {
     areas["Strategy"] = true;
     areas["Sleep"] = true;
-    arrayOfAreas.push("Strategy", "Sleep");
+    areas["Tactical"] = true;
+    types["Moba"] = true;
+    types["Tower_Defense"] = true;
+
+    arrayOfAreas.push("Strategy", "Sleep", "Tactical");
+    arrayOfTypes.push("Moba", "Tower_Defense");
   } else {
     areas["Strategy"] = false;
     areas["Sleep"] = false;
+    areas["Tactical"] = false;
+    types["Moba"] = false;
+    types["Tower_Defense"] = false;
     const indexStrategy = arrayOfAreas.indexOf("Strategy");
     arrayOfAreas.splice(indexStrategy, 1);
     const indexSleep = arrayOfAreas.indexOf("Sleep");
     arrayOfAreas.splice(indexSleep, 1);
+    const indexTactical = arrayOfAreas.indexOf("Tactical");
+    arrayOfAreas.splice(indexTactical, 1);
+    const indexMoba = arrayOfTypes.indexOf("Moba");
+    arrayOfTypes.splice(indexMoba, 1);
+    const indexTower = arrayOfTypes.indexOf("Tower_Defense");
+    arrayOfTypes.splice(indexTower, 1);
   }
 
   console.log(arrayOfAreas);
+  console.log(arrayOfTypes);
 }
+
+function moveLabel(event) {
+  event.currentTarget.nextElementSibling.classList.remove("theTags");
+  event.currentTarget.nextElementSibling.classList.add("tagMove");
+  /*document.querySelectorAll("input").forEach((e) => {
+    e.removeEventListener("focus", moveLabel);
+    e.addEventListener("blur", moveBackLabel);
+  });*/
+}
+
+/*function moveBackLabel(event) {
+  event.currentTarget.nextElementSibling.classList.add("theTags");
+  event.currentTarget.nextElementSibling.classList.remove("tagMove");
+  document.querySelectorAll("input").forEach((e) => {
+    e.addEventListener("focus", moveLabel);
+    e.removeEventListener("blur", moveBackLabel);
+  });
+}*/
 
 function pushData() {
   const payload = {

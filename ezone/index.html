@@ -25,7 +25,6 @@
         </p>
         <!-- <form action="javascript:formGames()"> -->
         <form id="theForm">
-          <label for="gamertag">Gamertag</label>
           <input
             id="gamertag"
             name="gamertag"
@@ -33,8 +32,9 @@
             placeholder=" "
             required
           />
-          <label for="mail">E-mail</label>
+          <label class="theTags" for="gamertag">Gamertag</label>
           <input id="mail" name="email" type="email" placeholder=" " required />
+          <label class="theTags" for="mail">E-mail</label>
           <input
             id="subscribe"
             type="checkbox"
@@ -64,209 +64,224 @@
           What games do you play? <br />
           This is for your personal filter algorithm
         </p>
-<div id="game_buttons">
-        <button
-          id="CS_GO"
-          class="gameOption"
-          data-feature="CS_GO"
-          type="button"
-        >
-          CS GO
-        </button>
-        <button
-          id="Tekken"
-          class="gameOption"
-          data-feature="Tekken"
-          type="button"
-        >
-          Tekken
-        </button>
-        <button id="FIFA" class="gameOption" data-feature="FIFA" type="button">
-          FIFA
-        </button>
-        <button
-          id="Super_Mario"
-          class="gameOption"
-          data-feature="Super_Mario"
-          type="button"
-        >
-          Super Mario
-        </button>
-        <button
-          id="Fortnite"
-          class="gameOption"
-          data-feature="Fortnite"
-          type="button"
-        >
-          Fortnite
-        </button>
-        <button
-          id="Call_of_Duty"
-          class="gameOption"
-          data-feature="Call_of_Duty"
-          type="button"
-        >
-          Call of Duty
-        </button>
-        <button
-          id="The_Sims"
-          class="gameOption"
-          data-feature="The_Sims"
-          type="button"
-        >
-          The Sims
-        </button>
-        <button
-          id="Mortal_Combat"
-          class="gameOption"
-          data-feature="Mortal_Combat"
-          type="button"
-        >
-          Mortal Combat
-        </button>
-        <button
-          id="Guitar_Hero"
-          class="gameOption"
-          data-feature="Guitar_Hero"
-          type="button"
-        >
-          Guitar Hero
-        </button>
-        <button
-          id="World_of_Warcraft"
-          class="gameOption"
-          data-feature="World_of_Warcraft"
-          type="button"
-        >
-          World of Warcraft
-        </button>
-        <button
-          id="Skyrim"
-          class="gameOption"
-          data-feature="Skyrim"
-          type="button"
-        >
-          Skyrim
-        </button>
-        <button
-          id="Starcraft"
-          class="gameOption"
-          data-feature="Starcraft"
-          type="button"
-        >
-          Starcraft
-        </button>
-        <button
-          id="Warcraft"
-          class="gameOption"
-          data-feature="Warcraft"
-          type="button"
-        >
-          Warcraft
-        </button>
-        <button
-          id="League_of_Legends"
-          class="gameOption"
-          data-feature="League_of_Legends"
-          type="button"
-        >
-          League of Legends
-        </button>
-        <button id="Dota" class="gameOption" data-feature="Dota" type="button">
-          Dota
-        </button>
-        <button
-          id="Valorant"
-          class="gameOption"
-          data-feature="Valorant"
-          type="button"
-        >
-          Valorant
-        </button>
-        <button
-          id="Left_for_Dead"
-          class="gameOption"
-          data-feature="Left_for_Dead"
-          type="button"
-        >
-          Left for Dead
-        </button>
-        <button
-          id="Overwatch"
-          class="gameOption"
-          data-feature="Overwatch"
-          type="button"
-        >
-          Overwatch
-        </button>
-        <button id="PUBG" class="gameOption" data-feature="PUBG" type="button">
-          PUBG
-        </button>
-        <button
-          id="Diablo"
-          class="gameOption"
-          data-feature="Diablo"
-          type="button"
-        >
-          Diablo
-        </button>
-        <button
-          id="Minecraft"
-          class="gameOption"
-          data-feature="Minecraft"
-          type="button"
-        >
-          Minecraft
-        </button>
-        <button
-          id="Tetris"
-          class="gameOption"
-          data-feature="Tetris"
-          type="button"
-        >
-          Tetris
-        </button>
-        <button
-          id="Pack_Man"
-          class="gameOption"
-          data-feature="Pack_Man"
-          type="button"
-        >
-          Pack Man
-        </button>
-        <button
-          id="Crash_Bandicoot"
-          class="gameOption"
-          data-feature="Crash_Bandicoot"
-          type="button"
-        >
-          Crash Bandicoot
-        </button>
-        <button
-          id="Rainbow_Six"
-          class="gameOption"
-          data-feature="Rainbow_Six"
-          type="button"
-        >
-          Rainbow Six
-        </button>
-        <button
-          id="Rocket_League"
-          class="gameOption"
-          data-feature="Rocket_League"
-          type="button"
-        >
-          Rocket League
-        </button>
-        <button
-          id="Heroes_of_the_Storm"
-          class="gameOption"
-          data-feature="Heroes_of_the_Storm"
-          type="button"
-        >
-          Heroes of the Storm
-        </button>
-      </div>
+        <div id="game_buttons">
+          <button
+            id="CS_GO"
+            class="gameOption"
+            data-feature="CS_GO"
+            type="button"
+          >
+            CS GO
+          </button>
+          <button
+            id="Tekken"
+            class="gameOption"
+            data-feature="Tekken"
+            type="button"
+          >
+            Tekken
+          </button>
+          <button
+            id="FIFA"
+            class="gameOption"
+            data-feature="FIFA"
+            type="button"
+          >
+            FIFA
+          </button>
+          <button
+            id="Super_Mario"
+            class="gameOption"
+            data-feature="Super_Mario"
+            type="button"
+          >
+            Super Mario
+          </button>
+          <button
+            id="Fortnite"
+            class="gameOption"
+            data-feature="Fortnite"
+            type="button"
+          >
+            Fortnite
+          </button>
+          <button
+            id="Call_of_Duty"
+            class="gameOption"
+            data-feature="Call_of_Duty"
+            type="button"
+          >
+            Call of Duty
+          </button>
+          <button
+            id="The_Sims"
+            class="gameOption"
+            data-feature="The_Sims"
+            type="button"
+          >
+            The Sims
+          </button>
+          <button
+            id="Mortal_Combat"
+            class="gameOption"
+            data-feature="Mortal_Combat"
+            type="button"
+          >
+            Mortal Combat
+          </button>
+          <button
+            id="Guitar_Hero"
+            class="gameOption"
+            data-feature="Guitar_Hero"
+            type="button"
+          >
+            Guitar Hero
+          </button>
+          <button
+            id="World_of_Warcraft"
+            class="gameOption"
+            data-feature="World_of_Warcraft"
+            type="button"
+          >
+            World of Warcraft
+          </button>
+          <button
+            id="Skyrim"
+            class="gameOption"
+            data-feature="Skyrim"
+            type="button"
+          >
+            Skyrim
+          </button>
+          <button
+            id="Starcraft"
+            class="gameOption"
+            data-feature="Starcraft"
+            type="button"
+          >
+            Starcraft
+          </button>
+          <button
+            id="Warcraft"
+            class="gameOption"
+            data-feature="Warcraft"
+            type="button"
+          >
+            Warcraft
+          </button>
+          <button
+            id="League_of_Legends"
+            class="gameOption"
+            data-feature="League_of_Legends"
+            type="button"
+          >
+            League of Legends
+          </button>
+          <button
+            id="Dota"
+            class="gameOption"
+            data-feature="Dota"
+            type="button"
+          >
+            Dota
+          </button>
+          <button
+            id="Valorant"
+            class="gameOption"
+            data-feature="Valorant"
+            type="button"
+          >
+            Valorant
+          </button>
+          <button
+            id="Left_for_Dead"
+            class="gameOption"
+            data-feature="Left_for_Dead"
+            type="button"
+          >
+            Left for Dead
+          </button>
+          <button
+            id="Overwatch"
+            class="gameOption"
+            data-feature="Overwatch"
+            type="button"
+          >
+            Overwatch
+          </button>
+          <button
+            id="PUBG"
+            class="gameOption"
+            data-feature="PUBG"
+            type="button"
+          >
+            PUBG
+          </button>
+          <button
+            id="Diablo"
+            class="gameOption"
+            data-feature="Diablo"
+            type="button"
+          >
+            Diablo
+          </button>
+          <button
+            id="Minecraft"
+            class="gameOption"
+            data-feature="Minecraft"
+            type="button"
+          >
+            Minecraft
+          </button>
+          <button
+            id="Tetris"
+            class="gameOption"
+            data-feature="Tetris"
+            type="button"
+          >
+            Tetris
+          </button>
+          <button
+            id="Pack_Man"
+            class="gameOption"
+            data-feature="Pack_Man"
+            type="button"
+          >
+            Pack Man
+          </button>
+          <button
+            id="Crash_Bandicoot"
+            class="gameOption"
+            data-feature="Crash_Bandicoot"
+            type="button"
+          >
+            Crash Bandicoot
+          </button>
+          <button
+            id="Rainbow_Six"
+            class="gameOption"
+            data-feature="Rainbow_Six"
+            type="button"
+          >
+            Rainbow Six
+          </button>
+          <button
+            id="Rocket_League"
+            class="gameOption"
+            data-feature="Rocket_League"
+            type="button"
+          >
+            Rocket League
+          </button>
+          <button
+            id="Heroes_of_the_Storm"
+            class="gameOption"
+            data-feature="Heroes_of_the_Storm"
+            type="button"
+          >
+            Heroes of the Storm
+          </button>
+        </div>
         <form>
           <button id="games_but" type="button">Continue</button>
         </form>
