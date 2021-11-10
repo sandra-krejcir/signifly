@@ -7,7 +7,6 @@
     <title>Vite App</title>
   </head>
   <body>
-
     <section id="started">
       <img src="img/logo.svg" alt="logo" />
       <div class="dots">
@@ -21,24 +20,34 @@
         <img src="img/e.png" alt="logo" />
         <h2>Let's get Started!</h2>
         <p>
-          Create a gamertag, submit your email and get a personalized
-          filter to see content that fits your needs and improve faster!
+          Create a gamertag, submit your email and get a personalized filter to
+          see content that fits your needs and improve faster!
         </p>
         <!-- <form action="javascript:formGames()"> -->
-        <form>
+        <form id="theForm">
           <label for="gamertag">Gamertag</label>
-          <input id="gamertag" type="text" placeholder=" " required />
+          <input
+            id="gamertag"
+            name="gamertag"
+            type="text"
+            placeholder=" "
+            required
+          />
           <label for="mail">E-mail</label>
-          <input id="mail" type="email" placeholder=" " required />
-          <input id="subscribe" type="checkbox" checked="checked" name="sub" />
+          <input id="mail" name="mail" type="email" placeholder=" " required />
+          <input
+            id="subscribe"
+            type="checkbox"
+            checked="checked"
+            name="sub"
+            value="true"
+          />
           <label name="sub" for="subscribe">Subscribe to our newsletter</label>
-          <button id="start_but">Continue</button>
+          <button id="start_but" type="button">Continue</button>
         </form>
         <button>Go Back</button>
       </div>
     </section>
-
-   
 
     <section id="games">
       <div class="dots">
@@ -50,107 +59,202 @@
       </div>
       <div class="container">
         <img src="img/e.png" alt="logo" />
-        <p>Hi Gamertag! <br>
-          What games do you play? <br>
-          This is for your personal filter algorithm</p>
+        <p>
+          Hi Gamertag! <br />
+          What games do you play? <br />
+          This is for your personal filter algorithm
+        </p>
 
-        <button id="CS_GO" class="gameOption" data-feature="CS_GO">
+        <button
+          id="CS_GO"
+          class="gameOption"
+          data-feature="CS_GO"
+          type="button"
+        >
           CS GO
         </button>
-        <button id="Tekken" class="gameOption" data-feature="Tekken">
+        <button
+          id="Tekken"
+          class="gameOption"
+          data-feature="Tekken"
+          type="button"
+        >
           Tekken
         </button>
-        <button id="FIFA" class="gameOption" data-feature="FIFA">FIFA</button>
-        <button id="Super_Mario" class="gameOption" data-feature="Super_Mario">
+        <button id="FIFA" class="gameOption" data-feature="FIFA" type="button">
+          FIFA
+        </button>
+        <button
+          id="Super_Mario"
+          class="gameOption"
+          data-feature="Super_Mario"
+          type="button"
+        >
           Super Mario
         </button>
-        <button id="Fortnite" class="gameOption" data-feature="Fortnite">
+        <button
+          id="Fortnite"
+          class="gameOption"
+          data-feature="Fortnite"
+          type="button"
+        >
           Fortnite
         </button>
         <button
           id="Call_of_Duty"
           class="gameOption"
           data-feature="Call_of_Duty"
+          type="button"
         >
           Call of Duty
         </button>
-        <button id="The_Sims" class="gameOption" data-feature="The_Sims">
+        <button
+          id="The_Sims"
+          class="gameOption"
+          data-feature="The_Sims"
+          type="button"
+        >
           The Sims
         </button>
         <button
           id="Mortal_Combat"
           class="gameOption"
           data-feature="Mortal_Combat"
+          type="button"
         >
           Mortal Combat
         </button>
-        <button id="Guitar_Hero" class="gameOption" data-feature="Guitar_Hero">
+        <button
+          id="Guitar_Hero"
+          class="gameOption"
+          data-feature="Guitar_Hero"
+          type="button"
+        >
           Guitar Hero
         </button>
         <button
           id="World_of_Warcraft"
           class="gameOption"
           data-feature="World_of_Warcraft"
+          type="button"
         >
           World of Warcraft
         </button>
-        <button id="Skyrim" class="gameOption" data-feature="Skyrim">
+        <button
+          id="Skyrim"
+          class="gameOption"
+          data-feature="Skyrim"
+          type="button"
+        >
           Skyrim
         </button>
-        <button id="Starcraft" class="gameOption" data-feature="Starcraft">
+        <button
+          id="Starcraft"
+          class="gameOption"
+          data-feature="Starcraft"
+          type="button"
+        >
           Starcraft
         </button>
-        <button id="Warcraft" class="gameOption" data-feature="Warcraft">
+        <button
+          id="Warcraft"
+          class="gameOption"
+          data-feature="Warcraft"
+          type="button"
+        >
           Warcraft
         </button>
         <button
           id="League_of_Legends"
           class="gameOption"
           data-feature="League_of_Legends"
+          type="button"
         >
           League of Legends
         </button>
-        <button id="Dota" class="gameOption" data-feature="Dota">Dota</button>
-        <button id="Valorant" class="gameOption" data-feature="Valorant">
+        <button id="Dota" class="gameOption" data-feature="Dota" type="button">
+          Dota
+        </button>
+        <button
+          id="Valorant"
+          class="gameOption"
+          data-feature="Valorant"
+          type="button"
+        >
           Valorant
         </button>
         <button
           id="Left_for_Dead"
           class="gameOption"
           data-feature="Left_for_Dead"
+          type="button"
         >
           Left for Dead
         </button>
-        <button id="Overwatch" class="gameOption" data-feature="Overwatch">
+        <button
+          id="Overwatch"
+          class="gameOption"
+          data-feature="Overwatch"
+          type="button"
+        >
           Overwatch
         </button>
-        <button id="PUBG" class="gameOption" data-feature="PUBG">PUBG</button>
-        <button id="Diablo" class="gameOption" data-feature="Diablo">
+        <button id="PUBG" class="gameOption" data-feature="PUBG" type="button">
+          PUBG
+        </button>
+        <button
+          id="Diablo"
+          class="gameOption"
+          data-feature="Diablo"
+          type="button"
+        >
           Diablo
         </button>
-        <button id="Minecraft" class="gameOption" data-feature="Minecraft">
+        <button
+          id="Minecraft"
+          class="gameOption"
+          data-feature="Minecraft"
+          type="button"
+        >
           Minecraft
         </button>
-        <button id="Tetris" class="gameOption" data-feature="Tetris">
+        <button
+          id="Tetris"
+          class="gameOption"
+          data-feature="Tetris"
+          type="button"
+        >
           Tetris
         </button>
-        <button id="Pack_Man" class="gameOption" data-feature="Pack_Man">
+        <button
+          id="Pack_Man"
+          class="gameOption"
+          data-feature="Pack_Man"
+          type="button"
+        >
           Pack Man
         </button>
         <button
           id="Crash_Bandicoot"
           class="gameOption"
           data-feature="Crash_Bandicoot"
+          type="button"
         >
           Crash Bandicoot
         </button>
-        <button id="Rainbow_Six" class="gameOption" data-feature="Rainbow_Six">
+        <button
+          id="Rainbow_Six"
+          class="gameOption"
+          data-feature="Rainbow_Six"
+          type="button"
+        >
           Rainbow Six
         </button>
         <button
           id="Rocket_League"
           class="gameOption"
           data-feature="Rocket_League"
+          type="button"
         >
           Rocket League
         </button>
@@ -158,13 +262,14 @@
           id="Heroes_of_the_Storm"
           class="gameOption"
           data-feature="Heroes_of_the_Storm"
+          type="button"
         >
           Heroes of the Storm
         </button>
         <form>
-          <button id="games_but">Continue</button>
+          <button id="games_but" type="button">Continue</button>
         </form>
-        <button id="games_back">Go Back</button>
+        <button id="games_back" type="button">Go Back</button>
       </div>
     </section>
 
@@ -179,67 +284,126 @@
       <div class="container">
         <img src="img/e.png" alt="logo" />
         <p>
-          Yo Gamertag! <br>
-          What Type of games do you play? <br>
+          Yo Gamertag! <br />
+          What Type of games do you play? <br />
           This is for your personal filter algorithm
         </p>
 
-        <button id="FPS" class="typeOption" data-feature="FPS">FPS</button>
-        <button id="MMORPG" class="typeOption" data-feature="MMORPG">
+        <button id="FPS" class="typeOption" data-feature="FPS" type="button">
+          FPS
+        </button>
+        <button
+          id="MMORPG"
+          class="typeOption"
+          data-feature="MMORPG"
+          type="button"
+        >
           MMORPG
         </button>
-        <button id="Sports" class="typeOption" data-feature="Sports">
+        <button
+          id="Sports"
+          class="typeOption"
+          data-feature="Sports"
+          type="button"
+        >
           Sports
         </button>
-        <button id="Racing" class="typeOption" data-feature="Racing">
+        <button
+          id="Racing"
+          class="typeOption"
+          data-feature="Racing"
+          type="button"
+        >
           Racing
         </button>
         <button
           id="Tower_Defense"
           class="typeOption"
           data-feature="Tower_Defense"
+          type="button"
         >
           Tower Defense
         </button>
-        <button id="RTS" class="typeOption" data-feature="RTS">RTS</button>
-        <button id="Simulation" class="typeOption" data-feature="Simulation">
+        <button id="RTS" class="typeOption" data-feature="RTS" type="button">
+          RTS
+        </button>
+        <button
+          id="Simulation"
+          class="typeOption"
+          data-feature="Simulation"
+          type="button"
+        >
           Simulation
         </button>
         <button
           id="Role_Playing"
           class="typeOption"
           data-feature="Role_Playing"
+          type="button"
         >
           Role Playing
         </button>
-        <button id="Adventure" class="typeOption" data-feature="Adventure">
+        <button
+          id="Adventure"
+          class="typeOption"
+          data-feature="Adventure"
+          type="button"
+        >
           Adventure
         </button>
-        <button id="Survival" class="typeOption" data-feature="Survival">
+        <button
+          id="Survival"
+          class="typeOption"
+          data-feature="Survival"
+          type="button"
+        >
           Survival
         </button>
-        <button id="Fighting" class="typeOption" data-feature="Fighting">
+        <button
+          id="Fighting"
+          class="typeOption"
+          data-feature="Fighting"
+          type="button"
+        >
           Fighting
         </button>
         <button
           id="Battle_Royale"
           class="typeOption"
           data-feature="Battle_Royale"
+          type="button"
         >
           Battle Royale
         </button>
-        <button id="Rhythm" class="typeOption" data-feature="Rhythm">
+        <button
+          id="Rhythm"
+          class="typeOption"
+          data-feature="Rhythm"
+          type="button"
+        >
           Rhythm
         </button>
-        <button id="Platform" class="typeOption" data-feature="Platform">
+        <button
+          id="Platform"
+          class="typeOption"
+          data-feature="Platform"
+          type="button"
+        >
           Platform
         </button>
-        <button id="Arcade" class="typeOption" data-feature="Arcade">
+        <button
+          id="Arcade"
+          class="typeOption"
+          data-feature="Arcade"
+          type="button"
+        >
           Arcade
         </button>
-        <button id="Moba" class="typeOption" data-feature="Moba">Moba</button>
+        <button id="Moba" class="typeOption" data-feature="Moba" type="button">
+          Moba
+        </button>
         <form>
-          <button id="type_but">Continue</button>
+          <button id="type_but" type="button">Continue</button>
         </form>
         <button id="type_back">Go Back</button>
       </div>
@@ -252,19 +416,19 @@
         <div class="dot"></div>
         <div class="dot_chosen"></div>
         <div class="dot"></div>
-       
       </div>
       <div class="container">
         <img src="img/e.png" alt="logo" />
         <p>
-          Hey Gamertag! <br>
-          What area do you want to improve? <br>
+          Hey Gamertag! <br />
+          What area do you want to improve? <br />
           This is for your personal filter algorithm
         </p>
         <button
           id="Hand_eye_coordination"
           class="areaOption"
           data-feature="Hand_eye_coordination"
+          type="button"
         >
           Hand/eye coordination
         </button>
@@ -272,19 +436,31 @@
           id="Reaction_time"
           class="areaOption"
           data-feature="Reaction_time"
+          type="button"
         >
           Reaction time
         </button>
-        <button id="Hearing" class="areaOption" data-feature="Hearing">
+        <button
+          id="Hearing"
+          class="areaOption"
+          data-feature="Hearing"
+          type="button"
+        >
           Hearing
         </button>
-        <button id="Vision" class="areaOption" data-feature="Vision">
+        <button
+          id="Vision"
+          class="areaOption"
+          data-feature="Vision"
+          type="button"
+        >
           Vision
         </button>
         <button
           id="Communication"
           class="areaOption"
           data-feature="Communication"
+          type="button"
         >
           Communication
         </button>
@@ -292,50 +468,111 @@
           id="Multitasking"
           class="areaOption"
           data-feature="Multitasking"
+          type="button"
         >
           Multitasking
         </button>
-        <button id="Mindset" class="areaOption" data-feature="Mindset">
+        <button
+          id="Mindset"
+          class="areaOption"
+          data-feature="Mindset"
+          type="button"
+        >
           Mindset
         </button>
-        <button id="Nutrition" class="areaOption" data-feature="Nutrition">
+        <button
+          id="Nutrition"
+          class="areaOption"
+          data-feature="Nutrition"
+          type="button"
+        >
           Nutrition
         </button>
-        <button id="Injuries" class="areaOption" data-feature="Injuries">
+        <button
+          id="Injuries"
+          class="areaOption"
+          data-feature="Injuries"
+          type="button"
+        >
           Injuries
         </button>
-        <button id="Technology" class="areaOption" data-feature="Technology">
+        <button
+          id="Technology"
+          class="areaOption"
+          data-feature="Technology"
+          type="button"
+        >
           Technology
         </button>
-        <button id="Physiology" class="areaOption" data-feature="Physiology">
+        <button
+          id="Physiology"
+          class="areaOption"
+          data-feature="Physiology"
+          type="button"
+        >
           Physiology
         </button>
-        <button id="Psychology" class="areaOption" data-feature="Psychology">
+        <button
+          id="Psychology"
+          class="areaOption"
+          data-feature="Psychology"
+          type="button"
+        >
           Psychology
         </button>
-        <button id="Sleep" class="areaOption" data-feature="Sleep">
+        <button
+          id="Sleep"
+          class="areaOption"
+          data-feature="Sleep"
+          type="button"
+        >
           Sleep
         </button>
-        <button id="Stress" class="areaOption" data-feature="Stress">
+        <button
+          id="Stress"
+          class="areaOption"
+          data-feature="Stress"
+          type="button"
+        >
           Stress
         </button>
-        <button id="Tactical" class="areaOption" data-feature="Tactical">
+        <button
+          id="Tactical"
+          class="areaOption"
+          data-feature="Tactical"
+          type="button"
+        >
           Tactical
         </button>
-        <button id="Strategy" class="areaOption" data-feature="Strategy">
+        <button
+          id="Strategy"
+          class="areaOption"
+          data-feature="Strategy"
+          type="button"
+        >
           Strategy
         </button>
-        <button id="Leadership" class="areaOption" data-feature="Leadership">
+        <button
+          id="Leadership"
+          class="areaOption"
+          data-feature="Leadership"
+          type="button"
+        >
           Leadership
         </button>
-        <button id="Teamwork" class="areaOption" data-feature="Teamwork">
+        <button
+          id="Teamwork"
+          class="areaOption"
+          data-feature="Teamwork"
+          type="button"
+        >
           Teamwork
         </button>
-        <button class="submit">SUBMIT</button>
+        <button class="submit" type="button">SUBMIT</button>
         <form>
-          <button id="area_but">Send Filter</button>
+          <button id="area_but" type="button">Send Filter</button>
         </form>
-        <button id="area_back">Go Back</button>
+        <button id="area_back" type="button">Go Back</button>
       </div>
     </section>
 
@@ -351,11 +588,11 @@
       <div class="container">
         <img src="img/e.png" alt="logo" />
         <h2>Link sent</h2>
-        <p>Would you like to create an account? <br>
-          Join the EZONE community and chat with other gamers.
-         All that's left for you to do is create a password
-         and you are all set! 
-         </p>
+        <p>
+          Would you like to create an account? <br />
+          Join the EZONE community and chat with other gamers. All that's left
+          for you to do is create a password and you are all set!
+        </p>
         <form>
           <label for="password1">Password</label>
           <input id="password1" type="password" placeholder=" " required />
@@ -363,9 +600,9 @@
           <label for="password2">Repeat password</label>
           <input id="password2" type="password" placeholder=" " required />
 
-          <button id="password_but">Create Acount</button>
+          <button id="password_but" type="button">Create Acount</button>
         </form>
-        <button id="password_back">Frontpage</button>
+        <button id="password_back" type="button">Frontpage</button>
       </div>
     </section>
 
@@ -375,7 +612,7 @@
         <img src="img/e.png" alt="logo" />
         <h2>Welcome Gamertag!</h2>
         <p>Your account has been created Remember to verify your email</p>
-        <button id="first_button">Frontpage</button>
+        <button id="first_button" type="button">Frontpage</button>
       </div>
     </section>
     <script type="module" src="/main.js"></script>

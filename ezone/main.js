@@ -71,6 +71,7 @@ const areas = {
   Teamwork: false,
 };
 
+const form = document.querySelector("#theForm");
 let arrayOfGames = [];
 let arrayOfTypes = [];
 let arrayOfAreas = [];
@@ -94,7 +95,7 @@ function start() {
     .querySelector("#League_of_Legends")
     .addEventListener("click", preselectAreas);
 
-  document.querySelector(".submit").addEventListener("click", pushData);
+  document.querySelector("#area_but").addEventListener("click", pushData);
 }
 
 function toggleType(event) {
@@ -179,12 +180,15 @@ function preselectAreas(event) {
 
 function pushData() {
   const payload = {
+    email: form.elements.mail.value,
+    gamertag: form.elements.gamertag.value,
+    subscribed: form.elements.sub.value,
     types: arrayOfTypes,
     games: arrayOfGames,
     areas: arrayOfAreas,
   };
 
-  fetch("https://kea21s-6eb0.restdb.io/rest/experiment", {
+  fetch("https://kea21s-6eb0.restdb.io/rest/signifly", {
     method: "POST",
     headers: {
       "x-apikey": "606d606af55350043100752e",
@@ -194,7 +198,12 @@ function pushData() {
   })
     .then((response) => {
       console.log(response);
+      form.elements.mail.value = "";
+      form.elements.gamertag.value = "";
+      form.elements.sub.value = "";
+      arrayOfGames = [];
       arrayOfTypes = [];
+      arrayOfAreas = [];
     })
     .catch((err) => {
       console.error(err);
