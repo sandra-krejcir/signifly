@@ -33,6 +33,7 @@ function start() {
   });
 
   document.querySelector("#subscribe").removeEventListener("focus", moveLabel);
+  document.querySelector("#privacy").removeEventListener("focus", moveLabel);
 
   document.querySelector("#subscribe").addEventListener("click", (e) => {
     if (subscribed === "yes") {

@@ -29,6 +29,10 @@ button {
   cursor: pointer;
 }
 
+.moveRight {
+  margin-left: 5vw;
+}
+
 #game_buttons {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
