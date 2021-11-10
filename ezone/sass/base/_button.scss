@@ -29,6 +29,17 @@ button {
   cursor: pointer;
 }
 
+#game_buttons {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1rem;
+  overflow: scroll;
+}
+
+#game_buttons::-webkit-scrollbar {
+  display: none;
+}
+
 #CS_GO,
 #Tekken,
 #FIFA,
@@ -58,7 +69,12 @@ button {
 #Heroes_of_the_Storm {
   color: $GREY-pastel;
   border: 1px solid $GREY-pastel;
-  padding: 1rem;
-  height: 50px;
-  width: 50px;
+  padding: 1.5rem;
+  height: 55px;
+  width: 55px;
+}
+
+#CS_GO {
+  background-image: url(img/games/csgo.png);
+  background-size: contain;
 }
