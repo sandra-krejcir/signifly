@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap");
+
 $GREY-pastel: #e3e3e5;
 $BLUE-light: #6249fa;
 
 form button {
+  font-family: "Archivo", sans-serif;
   color: $GREY-pastel;
   background-color: $BLUE-light;
   border-radius: 1rem;
@@ -12,6 +15,7 @@ form button {
 }
 
 #first_button {
+  font-family: "Archivo", sans-serif;
   color: #e3e3e5;
   background-color: $BLUE-light;
   border-radius: 1rem;
@@ -27,6 +31,10 @@ button {
   color: $BLUE-light;
   margin-bottom: 2rem;
   cursor: pointer;
+}
+
+section button {
+  font-family: "Archivo", sans-serif;
 }
 
 .moveRight {

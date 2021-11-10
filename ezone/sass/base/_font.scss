@@ -1,17 +1,21 @@
-@font-face {
-  font-family: "sharpiro-bold";
-  src: url();
-}
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap");
 
 h2 {
-  font-family: "sharpiro-bold";
+  font-family: "Archivo", sans-serif;
   color: #e3e3e5;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
 
 p {
+  font-family: "Archivo", sans-serif;
   color: #e3e3e5;
   font-size: 1.2rem;
   margin-bottom: 3rem;
+}
+
+input,
+label {
+  font-family: "Archivo", sans-serif;
 }

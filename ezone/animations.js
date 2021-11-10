@@ -10,7 +10,7 @@ function formStart() {
     document.querySelector(".container").classList.remove("form--no");
     if (form.checkValidity()) {
       formGames();
-      document.querySelector("#theGamer").textContent =
+      document.querySelector(".theGamerOne").textContent =
         document.querySelector("#gamertag").value;
     } else {
       form.reportValidity();
@@ -35,6 +35,8 @@ function formGames() {
   document.querySelector("#games").classList.remove("hidden");
   document.querySelector("#started").classList.add("hidden");
   document.querySelector("#type").classList.add("hidden");
+  document.querySelector(".theGamerTwo").textContent =
+    document.querySelector("#gamertag").value;
 
   document.querySelector("#games_but").addEventListener("click", formTypes);
   document.querySelector("#games_back").addEventListener("click", formStart);
@@ -49,6 +51,8 @@ function formTypes() {
   document.querySelector("#games").classList.add("hidden");
   document.querySelector("#type").classList.remove("hidden");
   document.querySelector("#area").classList.add("hidden");
+  document.querySelector(".theGamerThree").textContent =
+    document.querySelector("#gamertag").value;
 
   document.querySelector("#type_but").addEventListener("click", formArea);
   document.querySelector("#type_back").addEventListener("click", formGames);
@@ -89,6 +93,8 @@ function formEnd() {
 
   document.querySelector("#password").classList.add("hidden");
   document.querySelector("#end").classList.remove("hidden");
+  document.querySelector(".theGamerFour").textContent =
+    document.querySelector("#gamertag").value;
 
   document.querySelector("#first_button").addEventListener("click", formStart);
 }
