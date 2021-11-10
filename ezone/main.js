@@ -1,77 +1,9 @@
 import "./index.scss";
 import "./animations";
-
-const types = {
-  FPS: false,
-  MMORPG: false,
-  Sports: false,
-  Racing: false,
-  Tower_Defense: false,
-  RTS: false,
-  Simulation: false,
-  Role_Playing: false,
-  Adventure: false,
-  Survival: false,
-  Fighting: false,
-  Battle_Royale: false,
-  Rhythm: false,
-  Platform: false,
-  Arcade: false,
-  Moba: false,
-};
-
-const games = {
-  CS_GO: false,
-  Tekken: false,
-  FIFA: false,
-  Super_Mario: false,
-  Fortnite: false,
-  Call_of_Duty: false,
-  The_Sims: false,
-  Mortal_Combat: false,
-  Guitar_Hero: false,
-  World_of_Warcraft: false,
-  Skyrim: false,
-  Starcraft: false,
-  Warcraft: false,
-  League_of_Legends: false,
-  Dota: false,
-  Valorant: false,
-  Left_for_Dead: false,
-  Overwatch: false,
-  PUBG: false,
-  Diablo: false,
-  Minecraft: false,
-  Tetris: false,
-  Pack_Man: false,
-  Crash_Bandicoot: false,
-  Rainbow_Six: false,
-  Rocket_League: false,
-  Heroes_of_the_Storm: false,
-};
-
-const areas = {
-  Hand_eye_coordination: false,
-  Reaction_time: false,
-  Hearing: false,
-  Vision: false,
-  Communication: false,
-  Multitasking: false,
-  Mindset: false,
-  Nutrition: false,
-  Injuries: false,
-  Technology: false,
-  Physiology: false,
-  Psychology: false,
-  Sleep: false,
-  Stress: false,
-  Tactical: false,
-  Strategy: false,
-  Leadership: false,
-  Teamwork: false,
-};
+import { games, types, areas, URL, headers } from "./settings.js";
 
 const form = document.querySelector("#theForm");
+let subscribed = "yes";
 let arrayOfGames = [];
 let arrayOfTypes = [];
 let arrayOfAreas = [];
@@ -96,6 +28,21 @@ function start() {
     .addEventListener("click", preselectAreas);
 
   document.querySelector("#area_but").addEventListener("click", pushData);
+  document.querySelectorAll("input").forEach((e) => {
+    e.addEventListener("focus", moveLabel);
+  });
+
+  document.querySelector("#subscribe").removeEventListener("focus", moveLabel);
+  document.querySelector("#privacy").removeEventListener("focus", moveLabel);
+
+  document.querySelector("#subscribe").addEventListener("click", (e) => {
+    if (subscribed === "yes") {
+      subscribed = "no";
+    } else {
+      subscribed = "yes";
+    }
+    console.log(subscribed);
+  });
 }
 
 function toggleType(event) {
@@ -165,42 +112,74 @@ function preselectAreas(event) {
   if (games[selectedGame]) {
     areas["Strategy"] = true;
     areas["Sleep"] = true;
-    arrayOfAreas.push("Strategy", "Sleep");
+    areas["Tactical"] = true;
+    types["Moba"] = true;
+    types["Tower_Defense"] = true;
+
+    arrayOfAreas.push("Strategy", "Sleep", "Tactical");
+    arrayOfTypes.push("Moba", "Tower_Defense");
   } else {
     areas["Strategy"] = false;
     areas["Sleep"] = false;
+    areas["Tactical"] = false;
+    types["Moba"] = false;
+    types["Tower_Defense"] = false;
     const indexStrategy = arrayOfAreas.indexOf("Strategy");
     arrayOfAreas.splice(indexStrategy, 1);
     const indexSleep = arrayOfAreas.indexOf("Sleep");
     arrayOfAreas.splice(indexSleep, 1);
+    const indexTactical = arrayOfAreas.indexOf("Tactical");
+    arrayOfAreas.splice(indexTactical, 1);
+    const indexMoba = arrayOfTypes.indexOf("Moba");
+    arrayOfTypes.splice(indexMoba, 1);
+    const indexTower = arrayOfTypes.indexOf("Tower_Defense");
+    arrayOfTypes.splice(indexTower, 1);
   }
 
   console.log(arrayOfAreas);
+  console.log(arrayOfTypes);
 }
+
+function moveLabel(event) {
+  event.currentTarget.nextElementSibling.classList.remove("theTags");
+  event.currentTarget.nextElementSibling.classList.add("tagMove");
+  /*document.querySelectorAll("input").forEach((e) => {
+    e.removeEventListener("focus", moveLabel);
+    e.addEventListener("blur", moveBackLabel);
+  });*/
+}
+
+/*function moveBackLabel(event) {
+  event.currentTarget.nextElementSibling.classList.add("theTags");
+  event.currentTarget.nextElementSibling.classList.remove("tagMove");
+  document.querySelectorAll("input").forEach((e) => {
+    e.addEventListener("focus", moveLabel);
+    e.removeEventListener("blur", moveBackLabel);
+  });
+}*/
 
 function pushData() {
   const payload = {
-    email: form.elements.mail.value,
+    email: form.elements.email.value,
     gamertag: form.elements.gamertag.value,
-    subscribed: form.elements.sub.value,
+    subscribed: subscribed,
     types: arrayOfTypes,
     games: arrayOfGames,
     areas: arrayOfAreas,
   };
 
-  fetch("https://kea21s-6eb0.restdb.io/rest/signifly", {
+  console.log(payload);
+
+  fetch(URL, {
     method: "POST",
-    headers: {
-      "x-apikey": "606d606af55350043100752e",
-      "Content-Type": "application/json",
-    },
+    headers,
     body: JSON.stringify(payload),
   })
     .then((response) => {
       console.log(response);
-      form.elements.mail.value = "";
       form.elements.gamertag.value = "";
-      form.elements.sub.value = "";
+      form.elements.email.value = "";
+      form.elements.sub.checked = "checked";
       arrayOfGames = [];
       arrayOfTypes = [];
       arrayOfAreas = [];

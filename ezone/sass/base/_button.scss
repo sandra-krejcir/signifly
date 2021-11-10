@@ -29,12 +29,15 @@ button {
   cursor: pointer;
 }
 
+.moveRight {
+  margin-left: 5vw;
+}
+
 #game_buttons {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-gap: 1.8rem;
+  grid-gap: 1rem;
   overflow: scroll;
-  margin-right: -0.5rem;
 }
 
 #game_buttons::-webkit-scrollbar {

@@ -80,3 +80,29 @@ input:focus {
 input:invalid:not(:placeholder-shown, :focus) {
   border-color: #f48d69;
 }
+
+.theTags {
+  position: relative;
+  top: -15.5vh;
+  left: -10vw;
+  color: #999;
+  font-size: 16px;
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0);
+  pointer-events: none;
+}
+
+.tagMove {
+  position: relative;
+  left: -10vw;
+  top: -20vh;
+  color: #999;
+  font-size: 16px;
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 400;
+  background-color: #16162a;
+  pointer-events: none;
+}
