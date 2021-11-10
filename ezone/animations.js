@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", formStart);
 function formStart() {
   console.log("My Start");
 
+  document.querySelector("#gamertag").value = "";
   const form = document.querySelector("#theForm");
   document.querySelector("#start_but").addEventListener("click", (e) => {
     document.querySelector(".container").classList.remove("form--no");

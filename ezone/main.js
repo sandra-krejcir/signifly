@@ -193,7 +193,6 @@ function pushData() {
   })
     .then((response) => {
       console.log(response);
-      form.elements.gamertag.value = "";
       form.elements.email.value = "";
       form.elements.sub.checked = "checked";
       arrayOfGames = [];
