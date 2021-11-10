@@ -57,7 +57,9 @@ function toggleType(event) {
 
   if (types[selectedType]) {
     arrayOfTypes.push(selectedType);
+    target.classList.add("focus");
   } else {
+    target.classList.remove("focus");
     const typeIndex = arrayOfTypes.indexOf(selectedType);
     arrayOfTypes.splice(typeIndex, 1);
   }
@@ -77,7 +79,9 @@ function toggleGame(event) {
 
   if (games[selectedGame]) {
     arrayOfGames.push(selectedGame);
+    target.classList.add("focus");
   } else {
+    target.classList.remove("focus");
     const gameIndex = arrayOfGames.indexOf(selectedGame);
     arrayOfGames.splice(gameIndex, 1);
   }
@@ -97,7 +101,9 @@ function toggleArea(event) {
 
   if (areas[selectedArea]) {
     arrayOfAreas.push(selectedArea);
+    target.classList.add("focus");
   } else {
+    target.classList.remove("focus");
     const areaIndex = arrayOfAreas.indexOf(selectedArea);
     arrayOfAreas.splice(areaIndex, 1);
   }
