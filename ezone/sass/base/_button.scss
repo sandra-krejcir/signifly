@@ -29,6 +29,18 @@ button {
   cursor: pointer;
 }
 
+#game_buttons {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1.8rem;
+  overflow: scroll;
+  margin-right: -0.5rem;
+}
+
+#game_buttons::-webkit-scrollbar {
+  display: none;
+}
+
 #CS_GO,
 #Tekken,
 #FIFA,
@@ -57,8 +69,168 @@ button {
 #Rocket_League,
 #Heroes_of_the_Storm {
   color: $GREY-pastel;
-  border: 1px solid $GREY-pastel;
-  padding: 1rem;
+  padding: 1.5rem;
+  height: 55px;
+  width: 55px;
+  background-size: cover;
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  color: rgba(255, 0, 0, 0);
+}
+
+#CS_GO {
+  background-image: url(img/games/csgo.jpg);
+}
+
+#Tekken {
+  background-image: url(img/games/tekken.png);
+}
+#FIFA {
+  background-image: url(img/games/fifa.jpg);
+}
+#Super_Mario {
+  background-image: url(img/games/mario.svg);
+}
+#Fortnite {
+  background-image: url(img/games/fort.png);
+}
+#Call_of_Duty {
+  background-image: url(img/games/call.jpg);
+}
+#The_Sims {
+  background-image: url(img/games/sims.png);
+}
+#Mortal_Combat {
+  background-image: url(img/games/mortal.svg);
+}
+#Guitar_Hero {
+  background-image: url(img/games/guitar.png);
+}
+#World_of_Warcraft {
+  background-image: url(img/games/wow.jpg);
+}
+#Skyrim {
+  background-image: url(img/games/skyrim.svg);
+}
+#Starcraft {
+  background-image: url(img/games/stra.png);
+}
+#Warcraft {
+  background-image: url(img/games/craft.png);
+}
+#League_of_Legends {
+  background-image: url(img/games/lol.jpg);
+}
+#Dota {
+  background-image: url(img/games/dota.png);
+}
+#PUBG {
+  background-image: url(img/games/pubg.jpg);
+}
+#Valorant {
+  background-image: url(img/games/valorant.png);
+}
+#Left_for_Dead {
+  background-image: url(img/games/left.png);
+}
+#Overwatch {
+  background-image: url(img/games/overwatch.svg);
+}
+#Diablo {
+  background-image: url(img/games/diablo.png);
+}
+#Minecraft {
+  background-image: url(img/games/mincraft.jpg);
+}
+#Tetris {
+  background-image: url(img/games/tetris.jpg);
+}
+#Pack_Man {
+  background-image: url(img/games/packman.png);
+}
+#Crash_Bandicoot {
+  background-image: url(img/games/crash.png);
+}
+#Rainbow_Six {
+  background-image: url(img/games/six.jpg);
+}
+#Rocket_League {
+  background-image: url(img/games/rocket.png);
+}
+#Heroes_of_the_Storm {
+  background-image: url(img/games/heroes.png);
+}
+
+#type_buttons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.8rem;
+  overflow: scroll;
+  margin-right: -0.5rem;
+}
+
+#type_buttons::-webkit-scrollbar {
+  display: none;
+}
+
+#FPS,
+#MMORPG,
+#Sports,
+#Racing,
+#Tower_Defense,
+#RTS,
+#Simulation,
+#Role_Playing,
+#Adventure,
+#Survival,
+#Fighting,
+#Battle_Royale,
+#Rhythm,
+#Platform,
+#Arcade,
+#Moba {
+  color: $GREY-pastel;
+  padding: 1.5rem;
   height: 50px;
   width: 50px;
+  background-size: cover;
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  border: 1px solid white;
+}
+
+#area_button {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.8rem;
+  overflow: scroll;
+  margin-right: -0.5rem;
+}
+
+#area_button::-webkit-scrollbar {
+  display: none;
+}
+
+#Hand_eye_coordination,
+#Reaction_time,
+#Hearing,
+#Vision,
+#Communication,
+#Multitasking,
+#Mindset,
+#Nutrition,
+#Injuries,
+#Technology,
+#Physiology,
+#Sleep,
+#Stress,
+#Tactical,
+#Strategy,
+#Leadership,
+#Teamwork {
+  color: $GREY-pastel;
+  padding: 1.5rem;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
+  border: 1px solid white;
 }
