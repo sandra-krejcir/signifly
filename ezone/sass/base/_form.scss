@@ -97,7 +97,7 @@ input:invalid:not(:placeholder-shown, :focus) {
 .tagMove {
   position: relative;
   left: -8.5vw;
-  top: -20.5vh;
+  top: -20vh;
   color: #999;
   font-size: 16px;
   display: inline-block;
@@ -105,4 +105,35 @@ input:invalid:not(:placeholder-shown, :focus) {
   font-weight: 400;
   background-color: #16162a;
   pointer-events: none;
+}
+
+.form--no {
+  animation: NO 1s ease-in-out;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes NO {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
 }

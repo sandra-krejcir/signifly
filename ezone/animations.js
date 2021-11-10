@@ -7,10 +7,12 @@ function formStart() {
 
   const form = document.querySelector("#theForm");
   document.querySelector("#start_but").addEventListener("click", (e) => {
+    document.querySelector(".container").classList.remove("form--no");
     if (form.checkValidity()) {
       formGames();
     } else {
       form.reportValidity();
+      document.querySelector(".container").classList.add("form--no");
     }
   });
 
