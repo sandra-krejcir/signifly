@@ -197,7 +197,60 @@ button {
   width: 50px;
   background-size: cover;
   -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
-  border: 1px solid white;
+  color: rgba(255, 0, 0, 0);
+}
+
+#FPS {
+  background-image: url(icons/fps.png);
+}
+#MMORPG {
+  background-image: url(icons/mmorpg.png);
+  filter: invert(100%);
+}
+#Sports {
+  background-image: url(icons/sports.png);
+}
+#Racing {
+  background-image: url(icons/racing.png);
+}
+#Tower_Defense {
+  background-image: url(icons/tower_defense.png);
+}
+#RTS {
+  background-image: url(icons/six.png);
+}
+#Simulation {
+  background-image: url(icons/simulation.png);
+  filter: invert(100%);
+}
+#Role_Playing {
+  background-image: url(icons/role_playing.png);
+}
+#Adventure {
+  background-image: url(icons/adventure.png);
+}
+#Survival {
+  background-image: url(icons/survival.png);
+}
+#Fighting {
+  background-image: url(icons/fighting.png);
+}
+#Battle_Royale {
+  background-image: url(icons/battle_royale.png);
+}
+#Rhythm {
+  background-image: url(icons/rhythm.png);
+}
+#Platform {
+  background-image: url(icons/platform.png);
+}
+#Arcade {
+  background-image: url(icons/arcade.jpg);
+  filter: invert(100%);
+}
+#Moba {
+  background-image: url(icons/moba.png);
+  filter: invert(100%);
 }
 
 #area_button {
@@ -228,12 +281,70 @@ button {
 #Tactical,
 #Strategy,
 #Leadership,
-#Teamwork {
+#Teamwork,
+#Psychology {
   color: $GREY-pastel;
   padding: 1.5rem;
   height: 50px;
   width: 50px;
   background-size: cover;
   -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
-  border: 1px solid white;
+  color: rgba(255, 0, 0, 0);
+}
+
+#Hand_eye_coordination {
+  background-image: url(icons/hand_eye_coordination.png);
+}
+#Reaction_time {
+  background-image: url(icons/reaction_time.png);
+}
+#Hearing {
+  background-image: url(icons/hearing.png);
+}
+#Vision {
+  background-image: url(icons/vision.png);
+}
+#Communication {
+  background-image: url(icons/communication.png);
+}
+#Multitasking {
+  background-image: url(icons/multitasking.png);
+}
+#Mindset {
+  background-image: url(icons/mindset.png);
+}
+#Nutrition {
+  background-image: url(icons/nutrition.png);
+}
+#Injuries {
+  background-image: url(icons/injuries.png);
+}
+#Technology {
+  background-image: url(icons/technology.png);
+}
+#Physiology {
+  background-image: url(icons/physiology.png);
+}
+#Sleep {
+  background-image: url(icons/sleep.png);
+}
+#Stress {
+  background-image: url(icons/stress.png);
+  filter: invert(100%);
+}
+#Tactical {
+  background-image: url(icons/tactical.png);
+}
+#Strategy {
+  background-image: url(icons/strategy.png);
+}
+#Leadership {
+  background-image: url(icons/leadership.png);
+}
+#Teamwork {
+  background-image: url(icons/teamwork.jpg);
+  filter: invert(100%);
+}
+#Psychology {
+  background-image: url(icons/psychology.png);
 }
