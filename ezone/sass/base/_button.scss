@@ -1,6 +1,9 @@
+$GREY-pastel: #e3e3e5;
+$BLUE-light: #6249fa;
+
 form button {
-  color: #e3e3e5;
-  background-color: #6249fa;
+  color: $GREY-pastel;
+  background-color: $BLUE-light;
   border-radius: 1rem;
   border: none;
   font-size: 1rem;
@@ -10,7 +13,7 @@ form button {
 
 #first_button {
   color: #e3e3e5;
-  background-color: #6249fa;
+  background-color: $BLUE-light;
   border-radius: 1rem;
   border: none;
   font-size: 1rem;
@@ -21,7 +24,41 @@ form button {
 
 button {
   all: unset;
-  color: #6249fa;
+  color: $BLUE-light;
   margin-bottom: 2rem;
   cursor: pointer;
+}
+
+#CS_GO,
+#Tekken,
+#FIFA,
+#Super_Mario,
+#Fortnite,
+#Call_of_Duty,
+#The_Sims,
+#Mortal_Combat,
+#Guitar_Hero,
+#World_of_Warcraft,
+#Skyrim,
+#Starcraft,
+#Warcraft,
+#League_of_Legends,
+#Dota,
+#PUBG,
+#Valorant,
+#Left_for_Dead,
+#Overwatch,
+#Diablo,
+#Minecraft,
+#Tetris,
+#Pack_Man,
+#Crash_Bandicoot,
+#Rainbow_Six,
+#Rocket_League,
+#Heroes_of_the_Storm {
+  color: $GREY-pastel;
+  border: 1px solid $GREY-pastel;
+  padding: 1rem;
+  height: 50px;
+  width: 50px;
 }
