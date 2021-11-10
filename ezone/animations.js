@@ -5,7 +5,14 @@ window.addEventListener("DOMContentLoaded", formStart);
 function formStart() {
   console.log("My Start");
 
-  document.querySelector("#start_but").addEventListener("click", formGames);
+  const form = document.querySelector("#theForm");
+  document.querySelector("#start_but").addEventListener("click", (e) => {
+    if (form.checkValidity()) {
+      formGames();
+    } else {
+      form.reportValidity();
+    }
+  });
 
   document.querySelector("#started").classList.remove("hidden");
 
