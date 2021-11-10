@@ -57,7 +57,9 @@ function toggleType(event) {
 
   if (types[selectedType]) {
     arrayOfTypes.push(selectedType);
+    target.classList.add("focus");
   } else {
+    target.classList.remove("focus");
     const typeIndex = arrayOfTypes.indexOf(selectedType);
     arrayOfTypes.splice(typeIndex, 1);
   }
@@ -77,7 +79,9 @@ function toggleGame(event) {
 
   if (games[selectedGame]) {
     arrayOfGames.push(selectedGame);
+    target.classList.add("focus");
   } else {
+    target.classList.remove("focus");
     const gameIndex = arrayOfGames.indexOf(selectedGame);
     arrayOfGames.splice(gameIndex, 1);
   }
@@ -97,7 +101,9 @@ function toggleArea(event) {
 
   if (areas[selectedArea]) {
     arrayOfAreas.push(selectedArea);
+    target.classList.add("focus");
   } else {
+    target.classList.remove("focus");
     const areaIndex = arrayOfAreas.indexOf(selectedArea);
     arrayOfAreas.splice(areaIndex, 1);
   }
@@ -111,19 +117,29 @@ function preselectAreas(event) {
 
   if (games[selectedGame]) {
     areas["Strategy"] = true;
+    document.querySelector("#Strategy").classList.add("focus");
     areas["Sleep"] = true;
+    document.querySelector("#Sleep").classList.add("focus");
     areas["Tactical"] = true;
+    document.querySelector("#Tactical").classList.add("focus");
     types["Moba"] = true;
+    document.querySelector("#Moba").classList.add("focus");
     types["Tower_Defense"] = true;
+    document.querySelector("#Tower_Defense").classList.add("focus");
 
     arrayOfAreas.push("Strategy", "Sleep", "Tactical");
     arrayOfTypes.push("Moba", "Tower_Defense");
   } else {
     areas["Strategy"] = false;
+    document.querySelector("#Strategy").classList.remove("focus");
     areas["Sleep"] = false;
+    document.querySelector("#Sleep").classList.remove("focus");
     areas["Tactical"] = false;
+    document.querySelector("#Tactical").classList.remove("focus");
     types["Moba"] = false;
+    document.querySelector("#Moba").classList.remove("focus");
     types["Tower_Defense"] = false;
+    document.querySelector("#Tower_Defense").classList.remove("focus");
     const indexStrategy = arrayOfAreas.indexOf("Strategy");
     arrayOfAreas.splice(indexStrategy, 1);
     const indexSleep = arrayOfAreas.indexOf("Sleep");
