@@ -52,7 +52,7 @@ label {
   border-radius: 100%;
   left: 8px;
   top: 8px;
-  background-image: url(/ezone/img/check.png);
+  background-image: url(img/check.png);
   background-size: contain;
 }
 
@@ -70,6 +70,11 @@ input {
 
 input:valid {
   border-color: #5be080;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #6249fa;
 }
 
 input:invalid:not(:placeholder-shown, :focus) {
