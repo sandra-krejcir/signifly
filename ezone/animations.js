@@ -10,6 +10,8 @@ function formStart() {
     document.querySelector(".container").classList.remove("form--no");
     if (form.checkValidity()) {
       formGames();
+      document.querySelector("#theGamer").textContent =
+        document.querySelector("#gamertag").value;
     } else {
       form.reportValidity();
       document.querySelector(".container").classList.add("form--no");

@@ -584,7 +584,7 @@
         >
           Teamwork
         </button>
-        <button class="submit" type="button">SUBMIT</button>
+
         <form>
           <button id="area_but" type="button">Send Filter</button>
         </form>
@@ -610,11 +610,25 @@
           for you to do is create a password and you are all set!
         </p>
         <form>
-          <label for="password1">Password</label>
-          <input id="password1" type="password" placeholder=" " required />
+          <input
+            id="passwordOne"
+            name="passwordOne"
+            type="password"
+            placeholder=" "
+            required
+          />
+          <label class="theTags" for="passwordOne">Password</label>
 
-          <label for="password2">Repeat password</label>
-          <input id="password2" type="password" placeholder=" " required />
+          <input
+            id="passwordTwo"
+            name="passwordTwo"
+            type="password"
+            placeholder=" "
+            required
+          />
+          <label class="theTags moveRight" for="passwordTwo"
+            >Repeat password</label
+          >
 
           <button id="password_but" type="button">Create Acount</button>
         </form>
@@ -626,7 +640,7 @@
       <img src="img/logo.svg" alt="logo" />
       <div class="container">
         <img src="img/e.png" alt="logo" />
-        <h2>Welcome Gamertag!</h2>
+        <h2>Welcome <span id="theGamer"></span>!</h2>
         <p>Your account has been created Remember to verify your email</p>
         <button id="first_button" type="button">Frontpage</button>
       </div>

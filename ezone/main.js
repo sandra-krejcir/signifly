@@ -3,7 +3,7 @@ import "./animations";
 import { games, types, areas, URL, headers } from "./settings.js";
 
 const form = document.querySelector("#theForm");
-let subscribed;
+let subscribed = "yes";
 let arrayOfGames = [];
 let arrayOfTypes = [];
 let arrayOfAreas = [];
@@ -34,13 +34,14 @@ function start() {
 
   document.querySelector("#subscribe").removeEventListener("focus", moveLabel);
 
-  if (document.querySelector("#subscribe").checked) {
-    subscribed = "yes";
-  } else {
-    subscribed = "no";
-  }
-
-  console.log(subscribed);
+  document.querySelector("#subscribe").addEventListener("click", (e) => {
+    if (subscribed === "yes") {
+      subscribed = "no";
+    } else {
+      subscribed = "yes";
+    }
+    console.log(subscribed);
+  });
 }
 
 function toggleType(event) {
@@ -177,6 +178,7 @@ function pushData() {
       console.log(response);
       form.elements.gamertag.value = "";
       form.elements.email.value = "";
+      form.elements.sub.checked = "checked";
       arrayOfGames = [];
       arrayOfTypes = [];
       arrayOfAreas = [];
