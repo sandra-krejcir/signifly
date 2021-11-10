@@ -78,7 +78,7 @@ button {
   background-size: cover;
   -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
   color: rgba(255, 0, 0, 0);
-  filter: brightness(50%);
+  opacity: 0.5;
 }
 
 #CS_GO {
@@ -170,7 +170,7 @@ button {
   grid-gap: 1.8rem;
   overflow: scroll;
   margin-right: -0.5rem;
-  filter: brightness(50%);
+  opacity: 0.5;
 }
 
 #type_buttons::-webkit-scrollbar {
@@ -200,7 +200,7 @@ button {
   background-size: cover;
   -webkit-filter: drop-shadow(12px 12px 25px rgba(0, 0, 0, 0.5));
   color: rgba(255, 0, 0, 0);
-  filter: brightness(50%);
+  opacity: 0.5;
 }
 
 #FPS {
@@ -262,7 +262,7 @@ button {
   grid-gap: 1.8rem;
   overflow: scroll;
   margin-right: -0.5rem;
-  filter: brightness(50%);
+  opacity: 0.5;
 }
 
 #area_button::-webkit-scrollbar {
