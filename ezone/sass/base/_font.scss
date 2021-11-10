@@ -1,4 +1,24 @@
+@font-face {
+  font-family: "sharpiro-bold";
+  src: url("./ezone-webfonts/sharpiro-bold.woff2");
+}
+
+@font-face {
+  font-family: "sharpiro-regular";
+  src: url("./ezone-webfonts/sharpiro-regular.woff2");
+}
+
+@font-face {
+  font-family: "uniform-pro-con-black";
+  src: url("./ezone-webfonts/uniform-pro-con-black.woff2");
+}
+
+@font-face {
+  font-family: "uniform-pro-con-medium";
+  src: url("./ezone-webfonts/uniform-pro-con-medium.woff2");
+}
 h2 {
+  font-family: "sharpiro-bold";
   color: #e3e3e5;
   font-size: 2rem;
   margin-bottom: 3rem;

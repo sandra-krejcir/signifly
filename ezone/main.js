@@ -1,77 +1,9 @@
 import "./index.scss";
 import "./animations";
-
-const types = {
-  FPS: false,
-  MMORPG: false,
-  Sports: false,
-  Racing: false,
-  Tower_Defense: false,
-  RTS: false,
-  Simulation: false,
-  Role_Playing: false,
-  Adventure: false,
-  Survival: false,
-  Fighting: false,
-  Battle_Royale: false,
-  Rhythm: false,
-  Platform: false,
-  Arcade: false,
-  Moba: false,
-};
-
-const games = {
-  CS_GO: false,
-  Tekken: false,
-  FIFA: false,
-  Super_Mario: false,
-  Fortnite: false,
-  Call_of_Duty: false,
-  The_Sims: false,
-  Mortal_Combat: false,
-  Guitar_Hero: false,
-  World_of_Warcraft: false,
-  Skyrim: false,
-  Starcraft: false,
-  Warcraft: false,
-  League_of_Legends: false,
-  Dota: false,
-  Valorant: false,
-  Left_for_Dead: false,
-  Overwatch: false,
-  PUBG: false,
-  Diablo: false,
-  Minecraft: false,
-  Tetris: false,
-  Pack_Man: false,
-  Crash_Bandicoot: false,
-  Rainbow_Six: false,
-  Rocket_League: false,
-  Heroes_of_the_Storm: false,
-};
-
-const areas = {
-  Hand_eye_coordination: false,
-  Reaction_time: false,
-  Hearing: false,
-  Vision: false,
-  Communication: false,
-  Multitasking: false,
-  Mindset: false,
-  Nutrition: false,
-  Injuries: false,
-  Technology: false,
-  Physiology: false,
-  Psychology: false,
-  Sleep: false,
-  Stress: false,
-  Tactical: false,
-  Strategy: false,
-  Leadership: false,
-  Teamwork: false,
-};
+import { games, types, areas, URL, headers } from "./settings.js";
 
 const form = document.querySelector("#theForm");
+let subscribed;
 let arrayOfGames = [];
 let arrayOfTypes = [];
 let arrayOfAreas = [];
@@ -96,6 +28,14 @@ function start() {
     .addEventListener("click", preselectAreas);
 
   document.querySelector("#area_but").addEventListener("click", pushData);
+
+  if (document.querySelector("#subscribe").checked) {
+    subscribed = "yes";
+  } else {
+    subscribed = "no";
+  }
+
+  console.log(subscribed);
 }
 
 function toggleType(event) {
@@ -180,27 +120,25 @@ function preselectAreas(event) {
 
 function pushData() {
   const payload = {
-    email: form.elements.mail.value,
+    email: form.elements.email.value,
     gamertag: form.elements.gamertag.value,
-    subscribed: form.elements.sub.value,
+    subscribed: subscribed,
     types: arrayOfTypes,
     games: arrayOfGames,
     areas: arrayOfAreas,
   };
 
-  fetch("https://kea21s-6eb0.restdb.io/rest/signifly", {
+  console.log(payload);
+
+  fetch(URL, {
     method: "POST",
-    headers: {
-      "x-apikey": "606d606af55350043100752e",
-      "Content-Type": "application/json",
-    },
+    headers,
     body: JSON.stringify(payload),
   })
     .then((response) => {
       console.log(response);
-      form.elements.mail.value = "";
       form.elements.gamertag.value = "";
-      form.elements.sub.value = "";
+      form.elements.email.value = "";
       arrayOfGames = [];
       arrayOfTypes = [];
       arrayOfAreas = [];
