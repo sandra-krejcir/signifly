@@ -1,6 +1,7 @@
 import "./index.scss";
 import "./animations";
 import { games, types, areas, URL, headers } from "./settings.js";
+import { moveLabel, removeGamertag } from "./random_functions.js";
 
 const form = document.querySelector("#theForm");
 let subscribed = "yes";
@@ -28,12 +29,17 @@ function start() {
     .addEventListener("click", preselectAreas);
 
   document.querySelector("#area_but").addEventListener("click", pushData);
+
   document.querySelectorAll("input").forEach((e) => {
     e.addEventListener("focus", moveLabel);
   });
 
   document.querySelector("#subscribe").removeEventListener("focus", moveLabel);
   document.querySelector("#privacy").removeEventListener("focus", moveLabel);
+
+  document
+    .querySelector("#first_button")
+    .addEventListener("click", removeGamertag);
 
   document.querySelector("#subscribe").addEventListener("click", (e) => {
     if (subscribed === "yes") {
@@ -155,24 +161,6 @@ function preselectAreas(event) {
   console.log(arrayOfAreas);
   console.log(arrayOfTypes);
 }
-
-function moveLabel(event) {
-  event.currentTarget.nextElementSibling.classList.remove("theTags");
-  event.currentTarget.nextElementSibling.classList.add("tagMove");
-  /*document.querySelectorAll("input").forEach((e) => {
-    e.removeEventListener("focus", moveLabel);
-    e.addEventListener("blur", moveBackLabel);
-  });*/
-}
-
-/*function moveBackLabel(event) {
-  event.currentTarget.nextElementSibling.classList.add("theTags");
-  event.currentTarget.nextElementSibling.classList.remove("tagMove");
-  document.querySelectorAll("input").forEach((e) => {
-    e.addEventListener("focus", moveLabel);
-    e.removeEventListener("blur", moveBackLabel);
-  });
-}*/
 
 function pushData() {
   const payload = {
